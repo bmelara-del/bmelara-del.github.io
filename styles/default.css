@@ -9,6 +9,7 @@
 html {
     background: #FBFFF1;
 }
+
 body {
     margin: 0;
     font-family: "Inter", Arial, sans-serif;
@@ -74,12 +75,16 @@ li {
     padding: 10px;
     border: 3px solid #B4C5E4;
     border-radius: 12px;
+    display: inline-block;
+    margin: 16px 0;
 }
 
 .img-card img {
-    max-width: 100%;
-    height: auto;
     display: block;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 figcaption {

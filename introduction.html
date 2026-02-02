@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Introduction Page</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <div data-include="itis3135/components/header.html"></div>
+    <main>
         <figure class="img-card">
-            <h1>Bryan Melara | Bombastic Mouse</h1>
             <img src="/itis3135/images/toppng.com-biggie-cheese-600x700.png" alt="Biggie Cheese">
             <figcaption>aka Biggie Cheese</figcaption>
         </figure>
-    </header>
-    <main>
         <p>
         I am a junior at UNC Charlotte studying computer science with a concentration in Software Engineering. I enjoy learning about technology and code design, and often have personal projects I make on the side to help automate a lot of my daily life.
         </p>
@@ -35,11 +33,11 @@
             </li>
             <li>I’d also like to share: I am currently hyperfixated on customizing my linux setup on both my main pc and laptop and need someone to talk about it  with really badly.</li>
         </ul>
-    </main>
-    <footer>
         <blockquote>
             "Design is not just what it looks like and feels like. Design is how it works," - Steve Jobs
         </blockquote>
-    </footer>
+    </main>
+    <div data-include="itis3135/components/footer.html"></div>
+    <script src="itis3135/scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
