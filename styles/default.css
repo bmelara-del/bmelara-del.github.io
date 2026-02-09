@@ -109,3 +109,25 @@ blockquote {
     background: #B4C5E4;
     border-left: 6px solid #3066BE;
 }
+
+footer nav a::after {
+    content: " |";
+    margin-left: 6px;
+    color: #3066BE;
+    opacity: 0.7;
+}
+
+footer nav a:last-child::after {
+    content: "";
+}
+
+header nav a::after {
+    content: " | ";
+    margin-left: 6px;
+    color: #3066BE;
+    opacity: 0.7;
+}
+
+header nav a:last-child::after {
+    content: "";
+}
