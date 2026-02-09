@@ -43,10 +43,10 @@ nav {
 
 nav a {
     display: inline-block;
-    background: #090C9B;
+    /* background: #090C9B; */
     color: #FBFFF1;
     padding: 8px 12px;
-    border-radius: 999px;
+    /* border-radius: 999px; */
     text-decoration: none;
     font-weight: 700;
     margin-right: 8px;
@@ -55,6 +55,7 @@ nav a {
 nav a:hover, 
 nav a:focus {
     background: #3066BE;
+    border-radius: 14px;
     text-decoration: underline;
 }
 
@@ -72,22 +73,25 @@ h2 {
 }
 
 footer {
+    background-color: #3C3744;
     margin-top: 18px;
     padding-top: 12px;
     border-top: 4px solid #090C9B;
+    border-radius: 14px;
     font-size: 0.9rem;
 }
 
-footer {
-    margin-top: 26px;
-    padding-top: 12px;
-    border-top: 4px solid #B4C5E4;
-    font-size: 0.9em;
-
+footer nav a {
+    color: #FBFFF1;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 8px;
 }
 
-footer a:hover, 
-footer a:focus {
+
+footer nav a:hover, 
+footer nav a:focus {
     color: #FBFFF1;
     text-decoration: underline;
 }
