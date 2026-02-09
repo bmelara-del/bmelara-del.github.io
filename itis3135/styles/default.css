@@ -52,6 +52,10 @@ nav a {
     margin-right: 8px;
 }
 
+.second-menu{
+    border-top: #090C9B 4px solid;
+}
+
 nav a:hover, 
 nav a:focus {
     background: #3066BE;
