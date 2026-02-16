@@ -100,6 +100,26 @@ footer nav a:focus {
     text-decoration: underline;
 }
 
+footer p {
+    color: #FBFFF1;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+footer a, 
+footer a {
+    color: #FBFFF1;
+    text-decoration: underline;
+}
+
+footer p a:hover, 
+footer p a:focus {
+    color: #FBFFF1;
+    text-decoration: underline;
+}
+
 header nav {
     display: flex;
     flex-wrap: wrap;
