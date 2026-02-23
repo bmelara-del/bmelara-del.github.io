@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bryan Melara's Bombastic Mouse | ITIS 3135 | Product Landing</title>
+
+  <link rel="stylesheet" href="styles/default.css" />
+
+  <link rel="stylesheet" href="styles/product.css" />
+</head>
+
+<body>
+  <header data-include="components/header.html"></header>
+
+  <main>
+    <section class="bm-hero" id="top">
+      <div class="bm-hero-text">
+        <h2>Bombastic Mouse “SqueakPad”</h2>
+        <p>
+          A compact macro pad for students who want to lock in: quick shortcuts,
+          focus sessions, and a weekly review workflow — all in one clicky little slab.
+        </p>
+
+        <!-- FCC requirement: form with id="form" -->
+        <form
+          id="form"
+          action="https://www.freecodecamp.org/email-submit"
+          method="post"
+        >
+          <label for="email" class="bm-sr-only">Email address</label>
+
+          <!-- FCC requirement: input#email inside form, placeholder, type=email, name=email -->
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email for launch updates"
+            required
+          />
+
+          <input id="submit" type="submit" value="Get Updates" />
+        </form>
+
+        <p class="bm-fineprint">
+          No spam. Just updates + a free “Bombastic Weekly Review” template.
+        </p>
+      </div>
+
+      <aside class="bm-hero-card" aria-label="Quick product summary">
+        <h3>What it does</h3>
+        <ul>
+          <li>One-tap “Focus Mode” shortcuts</li>
+          <li>Macro keys for coding + note-taking</li>
+          <li>Simple weekly review checklist</li>
+        </ul>
+        <div class="bm-badges">
+          <span class="bm-badge">Minimal</span>
+          <span class="bm-badge">Fast</span>
+          <span class="bm-badge">Student-built vibe</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features" class="bm-section">
+      <h2>Features</h2>
+
+      <div class="bm-feature-row">
+        <article class="bm-feature">
+          <h3>Shortcut Power</h3>
+          <p>Map keys to your most-used actions: IDE commands, notes, and browser workflows.</p>
+        </article>
+
+        <article class="bm-feature">
+          <h3>Focus Sessions</h3>
+          <p>Use a simple 25/5 rhythm and track wins + blockers with one quick tap.</p>
+        </article>
+
+        <article class="bm-feature">
+          <h3>Weekly Review</h3>
+          <p>Turn chaos into a plan with a clean reset routine every Sunday night.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="demo" class="bm-section">
+      <h2>Demo</h2>
+      <p class="bm-sub">
+        A quick walkthrough.
+      </p>
+
+      <div class="bm-video-wrap">
+        <iframe
+          id="video"
+          src="https://www.youtube.com/embed/ZK-rNEhJIDs"
+          title="SqueakPad demo video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="pricing" class="bm-section">
+      <h2>Pricing</h2>
+
+      <div class="bm-pricing-row">
+        <div class="bm-price-card">
+          <h3>Starter</h3>
+          <p class="bm-price">$0</p>
+          <ul>
+            <li>Printable weekly review template</li>
+            <li>Basic shortcut map guide</li>
+            <li>Email updates</li>
+          </ul>
+          <a class="bm-cta" href="#form">Get it</a>
+        </div>
+
+        <div class="bm-price-card bm-featured">
+          <h3>Student+</h3>
+          <p class="bm-price">$9</p>
+          <ul>
+            <li>Template pack (PDF + Notion)</li>
+            <li>Focus + review prompts</li>
+            <li>Semester planning sheet</li>
+          </ul>
+          <a class="bm-cta" href="#form">Join</a>
+        </div>
+
+        <div class="bm-price-card">
+          <h3>Creator</h3>
+          <p class="bm-price">$19</p>
+          <ul>
+            <li>Project tracking boards</li>
+            <li>Habit + streak tracker</li>
+            <li>Monthly review kit</li>
+          </ul>
+          <a class="bm-cta" href="#form">Upgrade</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</html>

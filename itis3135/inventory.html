@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/default.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bryan Melara's Bombastic Mouse | ITIS 3135 | Inventory</title>
-</head>
-<body>
+
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="stylesheet" href="styles/inventory.css" />
+  </head>
+
+  <body>
     <header data-include="components/header.html"></header>
+
     <main>
-        <h2>Inventory Page</h2>
+      <!-- Part B requires an h2 in main -->
+      <h2>Build a Book Inventory App</h2>
+
+      <!-- FCC requires exactly one h1 with this exact text -->
+      <h1>Book Inventory</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="to-read">
+            <td>The Bombastic Mouse Manifesto</td>
+            <td>B. M. Squeaks</td>
+            <td>Identity</td>
+            <td><span class="status">To Read</span></td>
+            <td>
+              <span class="rate">
+                <span></span><span></span><span></span>
+              </span>
+            </td>
+          </tr>
+
+          <tr class="in-progress">
+            <td>Whiskers in the Spotlight</td>
+            <td>Velvet Paws</td>
+            <td>Story</td>
+            <td><span class="status">In Progress</span></td>
+            <td>
+              <span class="rate">
+                <span></span><span></span><span></span>
+              </span>
+            </td>
+          </tr>
+
+          <!-- include read rows with one/two/three so the tests see all cases -->
+          <tr class="read">
+            <td>Mic Drop Methods</td>
+            <td>Echo Paws</td>
+            <td>Performance</td>
+            <td><span class="status">Read</span></td>
+            <td>
+              <span class="rate one">
+                <span></span><span></span><span></span>
+              </span>
+            </td>
+          </tr>
+
+          <tr class="read">
+            <td>The Tiny Titan Playbook</td>
+            <td>Cheddar Noir</td>
+            <td>Confidence</td>
+            <td><span class="status">Read</span></td>
+            <td>
+              <span class="rate two">
+                <span></span><span></span><span></span>
+              </span>
+            </td>
+          </tr>
+
+          <tr class="read">
+            <td>Spotlight Sprints</td>
+            <td>Velvet Whiskers</td>
+            <td>Momentum</td>
+            <td><span class="status">Read</span></td>
+            <td>
+              <span class="rate three">
+                <span></span><span></span><span></span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </main>
+
     <footer data-include="components/footer.html"></footer>
     <script src="scripts/HTMLInclude.min.js"></script>
-</body>
+  </body>
 </html>

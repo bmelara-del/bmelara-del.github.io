@@ -1,0 +1,95 @@
+/* FCC REQUIRED layout rules */
+#playing-cards {
+  margin: 28px auto;
+  max-width: 900px; /* ensures 3 fit */
+}
+
+/* Make THIS the flex container */
+.content-panel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+
+  background: #fbfff1;
+  border: 2px solid #3c3744;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.card {
+  width: 240px;   /* or your previous value */
+  height: 340px;
+  flex: 0 0 auto; /* prevents stretching/stacking weirdly */
+
+  display: flex;
+  justify-content: space-between;
+
+  background: #fbfff1;
+  border: 3px solid #3c3744;
+  border-radius: 14px;
+  padding: 16px;
+}
+/* REQUIRED align-self rules */
+.left {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.middle {
+  align-self: center;
+
+  /* REQUIRED: middle uses flex */
+  display: flex;
+
+  /* REQUIRED: flex-direction column */
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.right {
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Optional styling (won’t break tests) */
+.rank {
+  margin: 0;
+  font-weight: 800;
+  font-size: 22px;
+  color: #090c9b;
+}
+
+.suit {
+  margin: 0;
+  font-size: 20px;
+  color: #3c3744;
+}
+
+.big {
+  margin: 0;
+  font-weight: 900;
+  font-size: 42px;
+  color: #090c9b;
+  letter-spacing: 1px;
+}
+
+.tag {
+  margin: 0;
+  font-weight: 700;
+  color: #3066be;
+}
+
+.tiny {
+  margin: 0;
+  font-size: 13px;
+  color: #3c3744;
+}
+
+.red {
+  color: #b00020;
+}

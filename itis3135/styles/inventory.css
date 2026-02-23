@@ -1,0 +1,82 @@
+/* keep table readable with your theme */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+th,
+td {
+  border: 1px solid rgba(60, 55, 68, 0.25);
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/* REQUIRED: each span element display inline-block */
+span {
+  display: inline-block;
+}
+
+/* REQUIRED: attribute selectors for row types + background-image linear-gradient */
+tr[class="read"] {
+  background-image: linear-gradient(to right, rgba(48, 102, 190, 0.14), rgba(180, 197, 228, 0.06));
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, rgba(60, 55, 68, 0.12), rgba(9, 12, 155, 0.06));
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, rgba(9, 12, 155, 0.10), rgba(48, 102, 190, 0.06));
+}
+
+/* REQUIRED: status spans inside each row type (border + background-image) */
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid rgba(60, 55, 68, 0.7);
+  background-image: linear-gradient(to right, rgba(180, 197, 228, 0.6), rgba(251, 255, 241, 0.2));
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid rgba(9, 12, 155, 0.6);
+  background-image: linear-gradient(to right, rgba(48, 102, 190, 0.7), rgba(9, 12, 155, 0.25));
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid rgba(48, 102, 190, 0.6);
+  background-image: linear-gradient(to right, rgba(9, 12, 155, 0.55), rgba(60, 55, 68, 0.18));
+}
+
+/* REQUIRED: status + spans with class value starting with rate (height/width/padding) */
+span[class="status"],
+span[class^="rate"] {
+  height: 24px;
+  width: 92px;
+  padding: 4px 8px;
+}
+
+/* REQUIRED: direct children of rate spans (border/radius/margin/height/width/background-color) */
+span[class^="rate"] > span {
+  border: 2px solid rgba(60, 55, 68, 0.6);
+  border-radius: 999px;
+  margin: 0 3px;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(251, 255, 241, 0.6);
+}
+
+/* REQUIRED: 48–53 rating fills using attribute selectors + descendants */
+/* ONE: first descendant */
+span[class*="one"] span:nth-child(1) {
+  background-image: linear-gradient(to right, #b4c5e4, #3066be);
+}
+
+/* TWO: first two descendants */
+span[class*="two"] span:nth-child(1),
+span[class*="two"] span:nth-child(2) {
+  background-image: linear-gradient(to right, #b4c5e4, #3066be);
+}
+
+/* THREE: all descendants */
+span[class*="three"] span {
+  background-image: linear-gradient(to right, #b4c5e4, #3066be);
+}

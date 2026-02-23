@@ -3,15 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/default.css">
+    <link rel="stylesheet" href="styles/default.css">
     <title>Bryan Melara's Bombastic Mouse | ITIS 3135 | Survey</title>
 </head>
 <body>
     <header data-include="components/header.html"></header>
     <main>
-        <h2>
-            Survey Page
-        </h2>
+       <h1 id="title">Survey Form</h1>
+    <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui a consectetur veniam fugit commodi animi voluptatibus quod quasi dolor veritatis excepturi, ea omnis accusamus, id, iusto laboriosam enim recusandae officia.</p>
+    <form action="" id="survey-form">
+        <label for="name"
+         id="name-label">Name</label>
+        <input type="text"
+         id="name"
+         name="name"
+         placeholder="Name" 
+         required>
+        <label for="email" id="email-label">Email</label>
+        <input type="email" 
+        id="email" 
+        name="email" 
+        placeholder="email@address.com"
+        required>
+        <label for="number" id="number-label">Number</label>
+        <input type="number" 
+        id="number" 
+        name="number" 
+        min="1" 
+        max="40" 
+        placeholder="21">
+        <label for="dropdown">Primary focus</label>
+        <select name="focus" id="dropdown">
+            <option value="web-dev">Web Development</option>
+            <option value="java">java Development</option>
+        </select>
+        <!--Radio Buttons-->
+        <p>Preferred learning style:</p>
+        <label>
+            Videos
+            <input type="radio" name="learning-style" value="videos">
+        </label>
+        <label>
+            Hands-on
+            <input type="radio" name="learning-style" value="hands-on">
+        </label>
+        <!--CheckBox-->
+        <p>Topics You want Included (check all that apply):</p>
+        <label>
+            Frontend
+            <input type="checkbox" name="topics" value="frontend">
+        </label>
+        <label>
+            Backend
+            <input type="checkbox" name="topics" value="backend">
+        </label>
+        <label>
+            Fullstack
+            <input type="checkbox" name="topics" value="fullstack">
+        </label>
+        <br>
+        <label for="comments">Additional Comments</label>
+        <br>
+        <textarea name="comments" id="comments" rows="5" placeholder="Anything else you want me to know?"></textarea>
+        <button type="submit" id="submit">Submit</button>
+    </form>
     </main>
 
     <footer data-include="components/footer.html"></footer>

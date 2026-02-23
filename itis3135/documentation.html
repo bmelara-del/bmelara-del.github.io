@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bryan Melara's | Bombastic Mouse | Technical Documentation</title>
+
+    <link rel="stylesheet" href="styles/default.css" />
+
+    <link rel="stylesheet" href="styles/documentation.css" />
+  </head>
+
+  <body>
+    
+     <header data-include="components/header.html"></header>
+
+
+ 
+    <main id="main-doc">
+      <h2>Technical Documentation Page</h2>
+
+    
+      <section class="main-section" id="Getting_Started">
+        <h3>Getting Started</h3>
+        <p>
+          This page is a quick technical reference for a clean, repeatable
+          workflow using your terminal and Git.
+        </p>
+        <p>
+          The goal is to keep projects organized, commits meaningful, and fixes
+          easy to trace.
+        </p>
+        <p>
+          If you’re working on GitHub Pages, you’ll typically edit files locally,
+          commit changes, and push to your repository.
+        </p>
+        <ul>
+          <li>Install Git and confirm it works</li>
+          <li>Choose a code editor you like</li>
+          <li>Make sure you can open a terminal</li>
+        </ul>
+        <code>git --version</code>
+      </section>
+
+      <section class="main-section" id="Terminal_Basics">
+        <h3>Terminal Basics</h3>
+        <p>
+          The terminal is just a text-based way to navigate folders and run
+          commands.
+        </p>
+        <p>
+          You’ll use it to move around your project, inspect files, and run Git
+          commands.
+        </p>
+        <ul>
+          <li><code>pwd</code> shows your current folder</li>
+          <li><code>ls</code> lists files</li>
+          <li><code>cd</code> changes directories</li>
+        </ul>
+        <p>Example navigation flow:</p>
+        <code>pwd</code>
+        <code>ls</code>
+        <code>cd projects/my-site</code>
+      </section>
+
+      <section class="main-section" id="Git_Fundamentals">
+        <h3>Git Fundamentals</h3>
+        <p>
+          Git tracks changes in your project over time using commits (snapshots).
+        </p>
+        <p>
+          A good habit is to commit small chunks of work with clear messages.
+        </p>
+        <p>
+          The most common loop is: check status → add changes → commit → push.
+        </p>
+        <ul>
+          <li><code>git status</code> shows what changed</li>
+          <li><code>git add .</code> stages changes</li>
+          <li><code>git commit -m "message"</code> saves a snapshot</li>
+        </ul>
+        <code>git status</code>
+        <code>git add .</code>
+        <code>git commit -m "Add technical docs layout"</code>
+      </section>
+
+      <section class="main-section" id="Branching_Strategy">
+        <h3>Branching Strategy</h3>
+        <p>
+          Branches let you experiment without breaking your main code. Think of
+          them as parallel timelines.
+        </p>
+        <p>
+          A simple approach: keep <code>main</code> stable and do work in a
+          feature branch.
+        </p>
+        <ul>
+          <li>Create a new branch for each feature</li>
+          <li>Commit as you go</li>
+          <li>Merge back into main when done</li>
+        </ul>
+        <p>Typical branch workflow:</p>
+        <code>git checkout -b feature/navbar</code>
+        <code>git commit -m "Style navbar"</code>
+      </section>
+
+      <section class="main-section" id="Troubleshooting">
+        <h3>Troubleshooting</h3>
+        <p>
+          When something goes wrong, don’t panic—use the tools Git gives you to
+          inspect what happened.
+        </p>
+        <p>
+          If you’re lost, start with <code>git status</code> and read it slowly.
+          It usually tells you what to do next.
+        </p>
+        <ul>
+          <li>
+            If you staged the wrong files, use <code>git restore --staged</code>
+          </li>
+          <li>If a merge is messy, pause and check <code>git diff</code></li>
+          <li>
+            If you need the commit history, use <code>git log --oneline</code>
+          </li>
+        </ul>
+        <p>Helpful inspection commands:</p>
+        <code>git log --oneline</code>
+        <code>git diff</code>
+      </section>
+    
+
+      <p>
+        Validation:
+        <a href="https://validator.w3.org/check?uri=referer">HTML</a> |
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+      </p>
+    </main>
+
+   
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+  </body>
+</html>

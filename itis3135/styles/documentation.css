@@ -1,0 +1,110 @@
+/* ========= FCC DOC LAYOUT (works with your existing theme CSS) ========= */
+
+/* Fixed sidebar nav (FCC requirement: left edge and always visible on desktop) */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 280px;
+  height: 100vh;
+
+  overflow-y: auto;
+
+  background: #fbfff1;
+  border-right: 3px solid #3c3744;
+  padding: 14px;
+}
+
+/* Navbar title */
+#navbar header {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  color: #090c9b;
+  margin: 0 0 12px;
+}
+
+/* Navbar links */
+.nav-link {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #3c3744;
+
+  padding: 8px 10px;
+  border-radius: 12px;
+  margin: 6px 0;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background: #b4c5e4;
+  outline: none;
+  text-decoration: underline;
+}
+
+/* MAIN DOC: Fix the “weird off-center” issue */
+#main-doc {
+  margin: 0 auto;              /* space for sidebar */
+  width: calc(100% - 280px);        /* fill remaining viewport width */
+
+  /* THIS is the key fix if your theme centers main with max-width + auto margins */
+  max-width: none;
+  
+
+  padding: 18px 24px 40px;
+}
+
+/* Optional: keep your text readable */
+#main-doc > h2 {
+  margin-top: 18px;
+}
+
+/* Section styling */
+.main-section {
+  margin-bottom: 18px;
+}
+
+.main-section header {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  color: #090c9b;
+  margin: 0 0 10px;
+}
+
+/* code blocks */
+.main-section code {
+  display: block;
+  background: #090c9b;
+  color: #fbfff1;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  overflow-x: auto;
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+/* ========= MEDIA QUERY (FCC requirement) ========= */
+@media (max-width: 900px) {
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+
+    border-right: none;
+    border-bottom: 3px solid #3c3744;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    width: 100%;
+    max-width: none;
+    padding: 18px 14px 40px;
+  }
+
+  .main-section code {
+    white-space: normal;
+  }
+}
