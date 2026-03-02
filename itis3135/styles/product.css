@@ -7,6 +7,10 @@
   z-index: 999;
 }
 
+iframe{
+  border: none;
+}
+
 
 .bm-header-inner {
   display: flex;
@@ -197,7 +201,7 @@
 
 @media (max-width: 720px) {
   body {
-    padding-top: 190px; /
+    padding-top: 190px; 
   }
 
   #video {
