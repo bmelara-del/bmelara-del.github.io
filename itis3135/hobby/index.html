@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --cyan: #52D1DC;
+            --granite: #475B5A;
+            --grey-olive: #8D8E8E;
+            --cool-steel: #A3A9AA;
+            --pale-slate: #BBBBBF;
+            --white: #ffffff;
+            --black: #111111;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, var(--pale-slate), #f4f4f4);
+            color: var(--granite);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--granite);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem 1.5rem;
+            border-bottom: 6px solid var(--cyan);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        header nav button {
+            background-color: var(--cyan);
+            color: var(--black);
+            border: none;
+            padding: 0.75rem 1.2rem;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        header nav button:hover,
+        header nav button:focus {
+            background-color: var(--cool-steel);
+            color: var(--granite);
+            transform: translateY(-2px);
+            outline: none;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .page {
+            display: none;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(71, 91, 90, 0.15);
+            border-left: 8px solid var(--cyan);
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--granite);
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--cyan);
+            padding-bottom: 0.4rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        figure {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 14px;
+            border: 4px solid var(--cool-steel);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        figcaption {
+            margin-top: 0.75rem;
+            font-style: italic;
+            color: var(--grey-olive);
+        }
+
+        ul,
+        ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        ul li,
+        ol li {
+            margin-bottom: 0.6rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background-color: var(--white);
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        thead {
+            background-color: var(--granite);
+            color: var(--white);
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid var(--pale-slate);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        tbody tr:hover {
+            background-color: #eafcfd;
+        }
+
+        footer {
+            margin-top: 3rem;
+            background-color: var(--granite);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 6px solid var(--cyan);
+        }
+
+        footer nav {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 0.4rem;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0.6rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page {
+                padding: 1.25rem;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            header nav button {
+                width: 100%;
+                max-width: 220px;
+            }
+
+            th,
+            td {
+                padding: 0.75rem;
+                font-size: 0.95rem;
+            }
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Guitar</h1>
+
+        <nav>
+            <button onclick="showPage('what')">What</button>
+            <button onclick="showPage('who')">Who</button>
+            <button onclick="showPage('when')">When</button>
+            <button onclick="showPage('where')">Where</button>
+            <button onclick="showPage('how')">How</button>
+            <button onclick="showPage('why')">Why</button>
+        </nav>
+    </header>
+    <main>
+        <section id="what" class="page active">
+            <h2>What is a Guitar?</h2>
+            <p>Guitar is both a creative outlet and a technical skill. It combines rhythm, melody, coordination, and personal expression in a way that makes every practice session feel rewarding.</p>
+            <p>A quiet room at home is great for concentration and practice.</p>
+            <p>Other great places include studios, jam spaces, and outdoor settings for performances.</p>
+            <figure>
+                <img src="images/istockphoto-1397013109-612x612.jpg" alt="a guitar">
+                <figcaption>A typical acoustic guitar</figcaption>
+            </figure>
+        </section>
+
+        <section id="who" class="page">
+            <h2>Who</h2>
+            <p>This page is about me as a guitar player and the kinds of musicians who inspire me.</p>
+            <p>I am especially interested in expressive players who balance technique with emotion and feel.</p>
+            <p>Some players that inspire this interest include blues, rock, and singer-songwriter guitarists such as Stevie Ray Vaughan, B.B. King, Jimi Hendrix, Eric Clapton, and John Mayer.</p>
+            <figure>
+                <img src="images/john-mayer-where-the-light-is-live-in-los-angeles.jpg" alt="a guitar">
+                <figcaption>John Mayer performing</figcaption>
+            </figure>
+
+            <ul>
+                <li>I enjoy both electric and acoustic guitar.</li>
+                <li>I like expressive phrasing, tone, and more melodic approaches.</li>
+                <li>I use guitar as both a hobby and a long-term skill to improve.</li>
+            </ul>
+        </section>
+
+        <section id="when" class="page">
+            <h2>When</h2>
+            <p>I started playing guitar in my early teens, around the age of 13. I picked it up because I was drawn to the sound and the idea of being able to create music on my own.</p>
+            <p>Over the years, I've played in various settings, from solo practice to small jam sessions with friends. I find that playing guitar is a great way to unwind and express myself after a long day.</p>
+            <p>The best times to practice guitar are when I can focus without distractions.</p>
+            <p>Short daily practice sessions often work better than rare long sessions.</p>
+
+            <figure>
+                <img src="images/acoustic-guitar-on-stand-next-600nw-2608408161.webp" alt="A typical guitar setup">
+                <figcaption>A typical guitar setup</figcaption>
+            </figure>
+
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Practice Focus</th>
+                    <th>Why It Works</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Morning</td>
+                    <td>Warm-ups and scales</td>
+                    <td>Fresh mind and good focus</td>
+                </tr>
+                <tr>
+                    <td>Afternoon</td>
+                    <td>Learning songs</td>
+                    <td>Good balance of energy and time</td>
+                </tr>
+                <tr>
+                    <td>Night</td>
+                    <td>Improvisation and relaxed playing</td>
+                    <td>Better creative mood</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="where" class="page">
+            <h2>Where</h2>
+            <p>Guitar can be practiced in many places, but the environment changes the experience.</p>
+            <p>A quiet room at home is ideal for concentration and steady improvement.</p>
+            <p>Other great places include studios, jam spaces, and outdoor settings for inspiration.</p>
+
+            <figure>
+                <img src="images/depositphotos_256503616-stock-photo-girl-in-long-gown-performing.webp" alt="An open mic night">
+                <figcaption>An open mic night</figcaption>
+            </figure>
+
+        </section>
+
+        <section id="how" class="page">
+            <h2>How</h2>
+            <p>Learning guitar takes repetition, patience, and structure.</p>
+            <p>The best approach is to split practice into technique, songs, ear training, and creativity.</p>
+            <p>Progress is easier to see when goals are small and consistent.</p>
+
+             <figure>
+                <img src="images/istockphoto-596345112-612x612.jpg" alt="An open mic night">
+                <figcaption>Guitar Lesson</figcaption>
+            </figure>
+
+            <ol>
+                <li>Start with tuning and warm-ups.</li>
+                <li>Practice chords, scales, or finger exercises.</li>
+                <li>Work on songs and finish with creative playing.</li>
+            </ol>
+
+        </section>
+
+        <section id="why" class="page">
+            <h2>Why</h2>
+            <p>I enjoy guitar because it makes me feel creative, calm, and challenged at the same time.</p>
+            <p>It gives me a skill I can build for years while also being something fun in the moment.</p>
+            <p>Music also connects memory, emotion, and discipline in a way that few hobbies do.</p>
+
+            <figure>
+                <img src="images/istockphoto-1173742410-612x612.jpg" alt="a guitar">
+                <figcaption>Happy guitar player</figcaption>
+            </figure>
+
+            <ul>
+                <li>It improves patience and discipline.</li>
+                <li>It helps with self-expression.</li>
+                <li>It creates a lifelong connection to music.</li>
+            </ul>
+
+        </section>
+    </main>
+    <footer>
+        <nav>
+                <a href="https://bmelara-del.github.io/itis3135/index.html" target="_blank">ITIS3135</a>
+                <a href="https://github.com/bmelara-del" target="_blank">GitHub</a>
+                <a href="https://webpages.charlotte.edu/bmelara/" target="_blank">CLT Web</a>
+                <a href="https://bmelara-del.github.io/" target="_blank">Github.io</a>
+                <a href="https://www.freecodecamp.org/bmelara0101" target="_blank">freeCodeCamp</a>
+                <a href="https://www.linkedin.com/in/bryan-melara-a4a605381/" target="_blank">LinkedIn</a>
+        </nav>
+
+        <p>
+                Designed by
+                <a href="https://bmelara-del.github.io/itis3135/bryanmelara.dev/index.html">Bryan Melara Web Studio</a>
+                &copy; 2026
+        </p>
+        <p>
+                <a href="https://www.freecodecamp.org/certification/bmelara0101/responsive-web-design-v9">Certified in Responsive Web Design</a>
+        </p>
+    </footer>
+
+    <script>
+        function showPage(pageID) {
+            // get all pages
+            const pages = document.querySelectorAll(".page");
+
+            //hide them 
+            pages.forEach(function(page) {
+                page.classList.remove("active");
+            })
+
+            // show the selected page
+            const selectedPage = document.getElementById(pageID);
+            selectedPage.classList.add("active");
+        }
+    </script>
+</body>
+</html>
