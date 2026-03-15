@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bryan Melara's Bombastic Mouse | ITIS 3135 | Hobby Page</title>
     <style>
         :root {
             --cyan: #52D1DC;
@@ -37,7 +37,13 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
-        header h1 {
+        header {
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
             font-size: 2.8rem;
             letter-spacing: 1px;
             margin-bottom: 1rem;
@@ -85,11 +91,11 @@
             border-left: 8px solid var(--cyan);
         }
 
-        .page.active {
+        .page.active{
             display: block;
         }
 
-        section h2 {
+        section h2{
             font-size: 2rem;
             color: var(--granite);
             margin-bottom: 1rem;
@@ -230,6 +236,7 @@
             <button onclick="showPage('where')">Where</button>
             <button onclick="showPage('how')">How</button>
             <button onclick="showPage('why')">Why</button>
+            <button onclick="showPage('ai-prompts')">AI Prompts</button>
         </nav>
     </header>
     <main>
@@ -352,8 +359,21 @@
             </ul>
 
         </section>
+
+        <section id="ai-prompts" class="page">
+            <h2>AI Prompts</h2>
+
+            <p>Here are some AI prompts used for this hobby page:</p>
+            <ul>
+                <li>
+                    Create a JavaScript function that lets a single HTML page behave like a multi-page website. The script should switch between different section elements when navigation buttons are clicked by hiding all sections and showing only the selected one.
+                </li>
+            </ul>
+
+        </section>
     </main>
     <footer>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
         <nav>
                 <a href="https://bmelara-del.github.io/itis3135/index.html" target="_blank">ITIS3135</a>
                 <a href="https://github.com/bmelara-del" target="_blank">GitHub</a>
@@ -381,7 +401,7 @@
             //hide them 
             pages.forEach(function(page) {
                 page.classList.remove("active");
-            })
+            });
 
             // show the selected page
             const selectedPage = document.getElementById(pageID);
