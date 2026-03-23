@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+    <link rel="stylesheet" href="/styles/default.css">
+    <link rel="stylesheet" href="styles/intro-form.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header data-include="components/header.html"></header>
+
+    <h2 id="page-heading">Introduction Form</h2>
+    <h3 id="form-instructions">Please Submit the form below: </h3>
+    <main>
+        <form id="intro-form">
+        <fieldset>
+                <legend>Name and Branding</legend>
+
+                <label for="first-name">First Name *</label>
+                <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    value="Bryan"
+                    placeholder="Enter your first name"
+                    required
+                >
+
+                <label for="middle-name">Middle Name / Initial</label>
+                <input
+                    type="text"
+                    id="middle-name"
+                    name="middle-name"
+                    value=""
+                    placeholder="Enter middle name or initial"
+                >
+
+                <label for="nickname">Nickname / Preferred Name</label>
+                <input
+                    type="text"
+                    id="nickname"
+                    name="nickname"
+                    value=""
+                    placeholder="Enter nickname or preferred name"
+                >
+
+                <label for="last-name">Last Name *</label>
+                <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    value="Melara"
+                    placeholder="Enter your last name"
+                    required
+                >
+
+                <label for="divider">Divider *</label>
+                <input
+                    type="text"
+                    id="divider"
+                    name="divider"
+                    value="|"
+                    placeholder="Example: |, ~, ♥"
+                    required
+                >
+
+                <label for="mascot-adjective">Mascot Adjective *</label>
+                <input
+                    type="text"
+                    id="mascot-adjective"
+                    name="mascot-adjective"
+                    value="Bombastic"
+                    placeholder="Enter mascot adjective"
+                    required
+                >
+
+                <label for="mascot-animal">Mascot Animal *</label>
+                <input
+                    type="text"
+                    id="mascot-animal"
+                    name="mascot-animal"
+                    value="Mouse"
+                    placeholder="Enter mascot animal"
+                    required
+                >
+            </fieldset>
+
+            <fieldset>
+                <legend>Acknowledgement</legend>
+
+                <label for="acknowledgement">Acknowledgement Statement *</label>
+                <input
+                    type="text"
+                    id="acknowledgement"
+                    name="acknowledgement"
+                    value="I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."
+                    placeholder="Enter acknowledgement statement"
+                    required
+                >
+
+                <label for="ack-date">Acknowledgement Date *</label>
+                <input
+                    type="date"
+                    id="ack-date"
+                    name="ack-date"
+                    value="2026-03-22"
+                    required
+                >
+            </fieldset>
+
+            <fieldset>
+                <legend>Image</legend>
+
+                <label for="image-upload">Upload Image</label>
+                <input
+                    type="file"
+                    id="image-upload"
+                    name="image-upload"
+                    accept="image/*"
+                >
+
+                <label for="image-caption">Image Caption *</label>
+                <input
+                    type="text"
+                    id="image-caption"
+                    name="image-caption"
+                    value="aka Biggie Cheese"
+                    placeholder="Enter image caption"
+                    required
+                >
+            </fieldset>
+
+            <fieldset>
+                <legend>Main Introduction</legend>
+
+                <label for="intro-paragraph">Introduction Paragraph *</label>
+                <textarea
+                    id="intro-paragraph"
+                    name="intro-paragraph"
+                    rows="4"
+                    placeholder="Write your main intro paragraph"
+                    required
+                >I am a junior at UNC Charlotte studying computer science with a concentration in Software Engineering. I enjoy learning about technology and code design, and often have personal projects I make on the side to help automate a lot of my daily life.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Main Bullet Points</legend>
+
+                <label for="personal-background">Personal Background *</label>
+                <textarea
+                    id="personal-background"
+                    name="personal-background"
+                    rows="3"
+                    placeholder="Describe your personal background"
+                    required
+                >I’m a musician/nerd who loves tinkering with pc hardware and teaching myself to code</textarea>
+
+                <label for="professional-background">Professional Background *</label>
+                <textarea
+                    id="professional-background"
+                    name="professional-background"
+                    rows="3"
+                    placeholder="Describe your professional background"
+                    required
+                >Currently only have over 2 years of experience working in retail</textarea>
+
+                <label for="academic-background">Academic Background *</label>
+                <textarea
+                    id="academic-background"
+                    name="academic-background"
+                    rows="3"
+                    placeholder="Describe your academic background"
+                    required
+                >Earned Associate of Arts degree from Central Piedmont in 2025, transferred to UNCC this current semester</textarea>
+
+                <label for="subject-background">Background in this Subject *</label>
+                <textarea
+                    id="subject-background"
+                    name="subject-background"
+                    rows="3"
+                    placeholder="Describe your background in this subject"
+                    required
+                >Previous courses from CPCC, as well as building and managing some of my own projects/websites</textarea>
+
+                <label for="primary-computer">Primary Work Computer and Location *</label>
+                <textarea
+                    id="primary-computer"
+                    name="primary-computer"
+                    rows="3"
+                    placeholder="Describe your main computer and location"
+                    required
+                >Custom built desktop PC in my home, dual booting linux and windows 11, as well as a Lenovo thinkpad laptop, in my home/that I bring with me to campus, running linux with hyprland as a window manager.</textarea>
+
+                <label for="backup-computer">Backup Work Computer and Location Plan *</label>
+                <textarea
+                    id="backup-computer"
+                    name="backup-computer"
+                    rows="3"
+                    placeholder="Describe your backup computer plan"
+                    required
+                >Campus computer labs and the Atkins Library if my primary setup is unavailable.</textarea>
+
+                <label for="funny-thing">Funny Thing</label>
+                <textarea
+                    id="funny-thing"
+                    name="funny-thing"
+                    rows="2"
+                    placeholder="Optional funny thing about yourself"
+                ></textarea>
+
+                <label for="share-more">Something I'd Also Like to Share</label>
+                <textarea
+                    id="share-more"
+                    name="share-more"
+                    rows="3"
+                    placeholder="Optional extra thing to share"
+                >I am currently hyperfixated on customizing my linux setup on both my main pc and laptop and need someone to talk about it with really badly.</textarea>
+            </fieldset>
+
+             <fieldset>
+                <legend>Courses</legend>
+
+                <div id="courses-container">
+                    <div class="course-entry">
+                        <label>Department *</label>
+                        <input type="text" class="course-department" value="ITSC" placeholder="Department" required>
+
+                        <label>Number *</label>
+                        <input type="text" class="course-number" value="1213" placeholder="Course number" required>
+
+                        <label>Name *</label>
+                        <input type="text" class="course-name" value="Introduction to Computer Science II" placeholder="Course name" required>
+
+                        <label>Reason *</label>
+                        <textarea class="course-reason" rows="2" placeholder="Why are you taking this course?" required>To learn more about java as a whole and become more proficient in the language.</textarea>
+
+                        <button type="button" class="remove-course">Remove Course</button>
+                    </div>
+
+                    <div class="course-entry">
+                        <label>Department *</label>
+                        <input type="text" class="course-department" value="ITIS" placeholder="Department" required>
+
+                        <label>Number *</label>
+                        <input type="text" class="course-number" value="3135" placeholder="Course number" required>
+
+                        <label>Name *</label>
+                        <input type="text" class="course-name" value="Front-End Web Application Development" placeholder="Course name" required>
+
+                        <label>Reason *</label>
+                        <textarea class="course-reason" rows="2" placeholder="Why are you taking this course?" required>In order to learn more about practical web design and layouts</textarea>
+
+                        <button type="button" class="remove-course">Remove Course</button>
+                    </div>
+
+                    <div class="course-entry">
+                        <label>Department *</label>
+                        <input type="text" class="course-department" value="MATH" placeholder="Department" required>
+
+                        <label>Number *</label>
+                        <input type="text" class="course-number" value="1242" placeholder="Course number" required>
+
+                        <label>Name *</label>
+                        <input type="text" class="course-name" value="Calculus II" placeholder="Course name" required>
+
+                        <label>Reason *</label>
+                        <textarea class="course-reason" rows="2" placeholder="Why are you taking this course?" required>It is necessary for my degree but would like to get it over with.</textarea>
+
+                        <button type="button" class="remove-course">Remove Course</button>
+                    </div>
+                </div>
+
+                <button type="button" id="add-course">Add Course</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote</legend>
+
+                <label for="quote-text">Quote *</label>
+                <textarea
+                    id="quote-text"
+                    name="quote-text"
+                    rows="3"
+                    placeholder="Enter your quote"
+                    required
+                >Design is not just what it looks like and feels like. Design is how it works.</textarea>
+
+                <label for="quote-author">Quote Author *</label>
+                <input
+                    type="text"
+                    id="quote-author"
+                    name="quote-author"
+                    value="Steve Jobs"
+                    placeholder="Enter quote author"
+                    required
+                >
+            </fieldset>
+
+            <fieldset>
+                <legend>Links</legend>
+
+                <label for="link1-name">Link 1 Name *</label>
+                <input type="text" id="link1-name" value="GitHub" placeholder="Link name" required>
+                <label for="link1-url">Link 1 URL *</label>
+                <input type="url" id="link1-url" value="https://github.com/" placeholder="https://example.com" required>
+
+                <label for="link2-name">Link 2 Name *</label>
+                <input type="text" id="link2-name" value="GitHub.io" placeholder="Link name" required>
+                <label for="link2-url">Link 2 URL *</label>
+                <input type="url" id="link2-url" value="https://pages.github.com/" placeholder="https://example.com" required>
+
+                <label for="link3-name">Link 3 Name *</label>
+                <input type="text" id="link3-name" value="freeCodeCamp" placeholder="Link name" required>
+                <label for="link3-url">Link 3 URL *</label>
+                <input type="url" id="link3-url" value="https://www.freecodecamp.org/" placeholder="https://example.com" required>
+
+                <label for="link4-name">Link 4 Name *</label>
+                <input type="text" id="link4-name" value="LinkedIn" placeholder="Link name" required>
+                <label for="link4-url">Link 4 URL *</label>
+                <input type="url" id="link4-url" value="https://www.linkedin.com/" placeholder="https://example.com" required>
+
+                <label for="link5-name">Link 5 Name *</label>
+                <input type="text" id="link5-name" value="CLT Web" placeholder="Link name" required>
+                <label for="link5-url">Link 5 URL *</label>
+                <input type="url" id="link5-url" value="https://webpages.charlotte.edu/" placeholder="https://example.com" required>
+            </fieldset>
+
+             <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clear-form">Clear</button>
+                <button type="button" id="generate-json">Generate JSON</button>
+                <button type="button" id="generate-html">Generate HTML</button>
+            </div>
+        </form>
+
+        <section id="output-section"></section>
+
+    </main>
+
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+</html>

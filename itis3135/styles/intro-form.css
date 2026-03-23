@@ -1,0 +1,161 @@
+/* =========================
+   FORM LAYOUT STYLING
+   ========================= */
+
+/* Space out the form from headings */
+#intro-form {
+    margin-top: 20px;
+}
+
+/* Group sections nicely */
+fieldset {
+    border: 2px solid #3C3744;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    background-color: #FBFFF1;
+}
+
+/* Section titles */
+legend {
+    font-weight: bold;
+    color: #090C9B;
+    padding: 0 6px;
+}
+
+/* Labels on their own line */
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Inputs and textareas fill width nicely */
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #B4C5E4;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+/* Give textareas a bit more room */
+textarea {
+    resize: vertical;
+}
+
+/* Focus effect (nice but simple) */
+input:focus,
+textarea:focus {
+    border-color: #3066BE;
+    outline: none;
+}
+
+/* =========================
+   COURSE SECTION
+   ========================= */
+
+/* Each course block */
+.course-entry {
+    border: 2px dashed #B4C5E4;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 14px;
+    background-color: #f8fbff;
+}
+
+/* Remove button spacing */
+.remove-course {
+    margin-top: 10px;
+    background-color: #3C3744;
+    color: #FBFFF1;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.remove-course:hover {
+    background-color: #090C9B;
+}
+
+/* Add course button */
+#add-course {
+    margin-top: 10px;
+    background-color: #3066BE;
+    color: #FBFFF1;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#add-course:hover {
+    background-color: #090C9B;
+}
+
+/* =========================
+   FORM BUTTONS
+   ========================= */
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* All buttons */
+.form-buttons button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3C3744;
+    color: #FBFFF1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.form-buttons button:hover {
+    background-color: #090C9B;
+}
+
+/* =========================
+   OUTPUT SECTION
+   ========================= */
+
+#output-section {
+    margin-top: 20px;
+}
+
+/* Code output styling */
+.code-output {
+    background-color: #f4f6fb;
+    border: 2px solid #B4C5E4;
+    border-radius: 10px;
+    padding: 16px;
+    overflow-x: auto;
+}
+
+/* Preserve formatting */
+.code-output pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* Reset link */
+#start-over-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-weight: bold;
+    color: #090C9B;
+    text-decoration: none;
+}
+
+#start-over-link:hover {
+    text-decoration: underline;
+}
