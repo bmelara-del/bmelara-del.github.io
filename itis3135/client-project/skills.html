@@ -22,10 +22,10 @@
         <a class="site-nav__brand" href="index.html">Sebastian Ala Torre</a>
 
         <div class="site-nav__links">
-          <a class="site-nav__link site-nav__link--active" href="index.html">Home</a>
+          <a class="site-nav__link" href="index.html">Home</a>
           <a class="site-nav__link" href="projects.html">Projects</a>
           <a class="site-nav__link" href="experience.html">Experience</a>
-          <a class="site-nav__link" href="skills.html">Skills</a>
+          <a class="site-nav__link site-nav__link--active" href="skills.html">Skills</a>
           <a class="site-nav__link" href="resume.html">Resume</a>
           <a class="site-nav__link" href="contact.html">Contact</a>
         </div>
@@ -42,38 +42,98 @@
     </header>
 
     <main class="content-shell">
-      <section class="content-page" aria-labelledby="skills-heading">
+      <section class="projects-section" id="skills" aria-labelledby="skills-heading">
         <h2 id="skills-heading" class="section-title">skills</h2>
 
-        <div class="info-grid">
-          <article class="info-card">
-            <h3 class="info-card__title">Languages</h3>
-            <p class="info-card__text">
-              JavaScript, TypeScript, Java, HTML, CSS, Bash, and x86 Assembly.
-            </p>
+        <div class="projects-list accordion-list">
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Languages</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  JavaScript, TypeScript, Java, HTML, CSS, Bash, and x86 Assembly.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    These languages support web interfaces, application logic,
+                    scripting, and lower-level systems programming.
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="info-card">
-            <h3 class="info-card__title">Frameworks and Libraries</h3>
-            <p class="info-card__text">
-              Next.js, React, Express, Flutter, and Framer Motion.
-            </p>
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Frameworks and Libraries</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  Next.js, React, Express, Flutter, and Framer Motion.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    These tools help build interactive user interfaces, APIs,
+                    full-stack applications, and cross-platform mobile experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="info-card">
-            <h3 class="info-card__title">Tools and Platforms</h3>
-            <p class="info-card__text">
-              Git, GitHub, MongoDB, Android Studio, Figma, Raspberry Pi, and
-              Vercel.
-            </p>
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Tools and Platforms</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  Git, GitHub, MongoDB, Android Studio, Figma, Raspberry Pi, and
+                  Vercel.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    These platforms support version control, design work,
+                    deployment, databases, embedded systems, and development workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="info-card">
-            <h3 class="info-card__title">Core Strengths</h3>
-            <p class="info-card__text">
-              Responsive design, front-end development, collaboration,
-              debugging, problem solving, and technical communication.
-            </p>
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Core Strengths</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  Responsive design, front-end development, collaboration,
+                  debugging, problem solving, and technical communication.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    These strengths help connect technical ability with teamwork,
+                    usability, and reliable project execution.
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </section>

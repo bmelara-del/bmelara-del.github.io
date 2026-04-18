@@ -41,7 +41,7 @@
     </header>
 
     <main class="content-shell">
-      <section class="info-section" aria-labelledby="contact-heading">
+      <section class="contact-section" aria-labelledby="contact-heading">
         <h2 id="contact-heading" class="section-title">contact</h2>
 
         <div class="contact-card">
@@ -51,6 +51,45 @@
           </p>
 
           <div class="social-links" id="social-links"></div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <label class="form-field">
+                <span>Name</span>
+                <input id="contact-name" name="name" type="text" />
+                <small class="form-error" id="name-error"></small>
+              </label>
+
+              <label class="form-field">
+                <span>Email</span>
+                <input id="contact-email" name="email" type="email" />
+                <small class="form-error" id="email-error"></small>
+              </label>
+            </div>
+
+            <label class="form-field">
+              <span>Subject</span>
+              <input id="contact-subject" name="subject" type="text" />
+              <small class="form-error" id="subject-error"></small>
+            </label>
+
+            <label class="form-field">
+              <span>Message</span>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="6"
+                maxlength="300"
+              ></textarea>
+              <div class="form-meta">
+                <small class="form-error" id="message-error"></small>
+                <small id="message-count" class="character-count">0 / 300</small>
+              </div>
+            </label>
+
+            <button class="button-link form-submit" type="submit">Send Message</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>

@@ -22,11 +22,11 @@
         <a class="site-nav__brand" href="index.html">Sebastian Ala Torre</a>
 
         <div class="site-nav__links">
-          <a class="site-nav__link site-nav__link--active" href="index.html">Home</a>
+          <a class="site-nav__link" href="index.html">Home</a>
           <a class="site-nav__link" href="projects.html">Projects</a>
           <a class="site-nav__link" href="experience.html">Experience</a>
           <a class="site-nav__link" href="skills.html">Skills</a>
-          <a class="site-nav__link" href="resume.html">Resume</a>
+          <a class="site-nav__link site-nav__link--active" href="resume.html">Resume</a>
           <a class="site-nav__link" href="contact.html">Contact</a>
         </div>
       </nav>
@@ -42,44 +42,106 @@
     </header>
 
     <main class="content-shell">
-      <section class="content-page" aria-labelledby="resume-heading">
+      <section class="projects-section" id="resume" aria-labelledby="resume-heading">
         <h2 id="resume-heading" class="section-title">resume</h2>
 
-        <div class="resume-block">
-          <h3 class="resume-block__title">Education</h3>
-          <p class="resume-block__text">
-            Bachelor of Science in Computer Science with a focus on software
-            engineering and application development.
-          </p>
+        <div class="projects-list accordion-list">
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Education</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  Bachelor of Science in Computer Science with a focus on software
+                  engineering and application development.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    Coursework and project work emphasize software design,
+                    application development, and practical problem solving.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Technical Experience</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  Experience building full-stack web applications, mobile apps, and
+                  systems projects with an emphasis on performance, structure, and
+                  usability.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    This work includes application planning, implementation,
+                    debugging, interface development, and testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Highlighted Projects</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  Developed projects involving Raspberry Pi hardware integration,
+                  nonprofit web development, Android navigation tools, and low-level
+                  banking systems in assembly.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    These projects show experience across web, mobile, embedded,
+                    and systems-focused environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card accordion-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Tools and Technologies</h3>
+              <button class="accordion-toggle" type="button" aria-expanded="false">
+                View details
+              </button>
+            </div>
+            <div class="project-card__body project-card__body--stack">
+              <div class="project-card__content project-card__content--full">
+                <p class="project-card__description">
+                  JavaScript, TypeScript, React, Next.js, Express, MongoDB, Flutter,
+                  Git, GitHub, Android Studio, Figma, and Vercel.
+                </p>
+                <div class="accordion-panel" hidden>
+                  <p>
+                    These tools support application architecture, interface design,
+                    collaboration, deployment, and data handling.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <div class="resume-block">
-          <h3 class="resume-block__title">Technical Experience</h3>
-          <p class="resume-block__text">
-            Experience building full-stack web applications, mobile apps, and
-            systems projects with an emphasis on performance, structure, and
-            usability.
-          </p>
-        </div>
-
-        <div class="resume-block">
-          <h3 class="resume-block__title">Highlighted Projects</h3>
-          <p class="resume-block__text">
-            Developed projects involving Raspberry Pi hardware integration,
-            nonprofit web development, Android navigation tools, and low-level
-            banking systems in assembly.
-          </p>
-        </div>
-
-        <div class="resume-block">
-          <h3 class="resume-block__title">Tools and Technologies</h3>
-          <p class="resume-block__text">
-            JavaScript, TypeScript, React, Next.js, Express, MongoDB, Flutter,
-            Git, GitHub, Android Studio, Figma, and Vercel.
-          </p>
-        </div>
-
-        <div class="resume-actions">
+        <div class="resume-actions resume-actions--projects-style">
           <a class="button-link" href="#">Download Resume PDF</a>
         </div>
       </section>
