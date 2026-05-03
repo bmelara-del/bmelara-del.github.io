@@ -260,8 +260,7 @@ function renderTagFilters() {
 }
 
 /**
- * 
- * Initializes event listeners for search input and tag filter buttons to update the project display dynamically.
+ * Sets up event listeners for search input and tag filter buttons to update the project display dynamically.
  * The function first retrieves the search input element and the tag filter container. If either of these elements is not found, it simply renders the projects without setting up filters. If both elements are present, it calls the functions to render the tag filters and the initial list of projects. It then adds an event listener to the search input to update the projectState with the current search term and re-render the projects whenever the input changes. It also adds a click event listener to the filter container that checks if a tag button was clicked, updates the active tag in the projectState, re-renders the tag filters to reflect the active selection, and re-renders the projects based on the new filter.
  * @param {*} projectState
  * @returns 
@@ -340,10 +339,19 @@ function renderSocials() {
     .join("");
 }
 
+/**
+ * Validates an email address.
+ * @param {string} email - The email address to validate.
+ * @returns {boolean} - True if the email is valid, false otherwise.
+ */
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+/**
+ * Sets up the contact form functionality.
+ * @returns {void}
+ */
 function setupContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
@@ -362,19 +370,39 @@ function setupContactForm() {
     message: document.getElementById("message-error"),
   };
 
+  /**
+   * Sets an error message for a specific form field.
+   * @param {string} field - The form field to set the error for.
+   * @param {string} message - The error message to display.
+   */
   function setError(field, message) {
     errors[field].textContent = message;
   }
 
+
+  /**
+   * Clears all error messages and resets the form status.
+   * This function iterates through all the error elements defined in the errors object and clears their text content, effectively removing any displayed error messages. It also resets the status element's text content and class name to its default state, ensuring that any previous success or error messages are cleared when the user interacts with the form again.
+   * @returns {void}
+   */
   function clearStatus() {
     status.textContent = "";
     status.className = "form-status";
   }
 
+  /**
+   * Updates the character count for the message input field.
+   * This function updates the text content of the messageCount element to show the current number of characters entered in the message input field, along with the maximum allowed characters (300). It is called whenever the user types in the message input to provide real-time feedback on how many characters they have used and how many they have left before reaching the limit.
+   * @returns {void}
+   */
   function updateCount() {
     messageCount.textContent = `${messageInput.value.length} / 300`;
   }
-
+  
+  /**
+   * Validates the contact form.
+   * @returns {boolean} - True if the form is valid, false otherwise.
+   */
   function validateForm() {
     let isValid = true;
 
@@ -442,6 +470,10 @@ function setupContactForm() {
   });
 }
 
+/**
+ * Sets up the grid background for the canvas.
+ * @returns {void}
+ */
 function setupGridBackground() {
   const canvas = document.getElementById("grid-canvas");
   if (!canvas) return;
@@ -468,6 +500,13 @@ function setupGridBackground() {
     };
   }
 
+  /**
+   * Creates squares for the grid background.
+   * @param {*} count 
+   * @param {*} width 
+   * @param {*} height 
+   * @returns 
+   */
   function createSquares(count, width, height) {
     const currentCount = squares.length;
     if (currentCount >= count) return;
@@ -486,6 +525,11 @@ function setupGridBackground() {
     }
   }
 
+  /**
+   * Draws the grid lines on the canvas.
+   * @param {*} width 
+   * @param {*} height 
+   */
   function drawGrid(width, height) {
     ctx.strokeStyle = gridColor;
     ctx.lineWidth = 1;
@@ -505,6 +549,12 @@ function setupGridBackground() {
     }
   }
 
+  /**
+   * Handles resizing of the canvas and adjusts the number of squares based on the new dimensions.
+   * The function first updates the canvas width and height to match the current window dimensions. It then determines the number of squares to create based on the width of the window, with fewer squares for smaller screens. If the new dimensions are larger than the previous ones, it creates additional squares as needed. If the new dimensions are smaller, it reduces the number of squares by truncating the array. Finally, it updates the previous width and height values for future comparisons.
+   * @returns {void}
+   * 
+   */
   function resize() {
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -528,6 +578,11 @@ function setupGridBackground() {
     prevHeight = height;
   }
 
+  /**
+   * Animates the squares on the canvas to create a dynamic background effect.
+   * The function first clears the canvas and fills it with the background color. It then draws the grid lines. For each square, it checks if there is a delay before it should start animating. If there is a delay, it decreases the delay counter and skips the animation for that square. If there is no delay, it updates the opacity of the square based on its current direction (fading in or out). If the opacity reaches 0.5, it changes direction to start fading out. If the opacity reaches 0, it resets the square's position and starts fading in again. Finally, it requests the next animation frame to continue the animation loop.
+   * @returns {void}  
+   */
   function animate() {
     const width = canvas.width;
     const height = canvas.height;
