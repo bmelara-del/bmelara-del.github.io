@@ -8,6 +8,15 @@
   5. Dynamic social icon rendering
 */
 
+/**
+ * Purpose: Define the project data and render it dynamically on the Projects page, including search and tag filtering functionality. Each project includes a title, description, image, links to GitHub and live site (if available), and associated tags. The rendering functions create the necessary HTML structure for each project card and update the display based on user interactions with the search input and tag filters.
+ * Key Functions:
+ * - createProjectLinks: Generates the HTML for GitHub and live site links for a project.
+ * - getFilteredProjects: Returns the list of projects that match the current search term and active tag filter.
+ * - renderProjects: Renders the filtered list of projects into the DOM.
+ * - renderTagFilters: Renders the tag filter buttons based on the unique tags from all projects.
+ * - setupProjectFilters: Initializes event listeners for search input and tag filter buttons to update the project display dynamically.
+ */
 const projects = [
   {
     title: "Smart Pet Feeder",
@@ -51,6 +60,12 @@ const projects = [
   },
 ];
 
+/**
+ * Purpose: Define the social media/contact links and render them dynamically in the footer. Each social link includes a URL, label, CSS modifier for styling, and an SVG icon. The renderSocials function generates the HTML for each social link and inserts it into the DOM.
+ * Key
+ * Functions:
+ * - renderSocials: Renders the social media/contact links into the DOM based on the defined socials array. 
+ */
 const socials = [
   {
     link: "mailto:sdalator@outlook.com",
@@ -84,11 +99,26 @@ const socials = [
   },
 ];
 
+/**
+ * Purpose: Manage the state and rendering of the projects on the Projects page, including filtering by tags and search terms. The projectState object keeps track of the currently active tag filter and the search term entered by the user. The functions createProjectLinks, getFilteredProjects, renderProjects, renderTagFilters, and setupProjectFilters work together to dynamically display the projects based on user interactions.
+ * Key Functions: 
+ * - createProjectLinks: Generates the HTML for GitHub and live site links for a project, with different styling for mobile vs desktop.
+ * - getFilteredProjects: Returns the list of projects that match the current search term and active tag filter.
+ * - renderProjects: Renders the filtered list of projects into the DOM, including handling empty states.
+ * - renderTagFilters: Renders the tag filter buttons based on the unique tags from all projects.
+ * - setupProjectFilters: Initializes event listeners for search input and tag filter buttons to update the project display dynamically.
+ */
 const projectState = {
   activeTag: "All",
   searchTerm: "",
 };
 
+/**
+ * Creates the HTML for the GitHub and live site links for a project.
+ * @param {*} project 
+ * @param {*} mobile 
+ * @returns 
+ */
 function createProjectLinks(project, mobile = false) {
   const links = [];
 
@@ -116,6 +146,12 @@ function createProjectLinks(project, mobile = false) {
   return `<div class="${mobile ? "project-card__mobile-links" : "project-card__links"}">${links.join("")}</div>`;
 }
 
+/**
+ * Returns the list of projects that match the current search term and active tag filter.
+ * The function checks if each project matches the active tag (or if "All" is selected) and if the search term is found in the project's title, description, or tags. It returns an array of projects that meet both criteria.
+ * @param {*} projectState
+ * @returns 
+ */
 function getFilteredProjects() {
   return projects.filter((project) => {
     const matchesTag =
@@ -136,6 +172,12 @@ function getFilteredProjects() {
   });
 }
 
+/**
+ * Renders the filtered list of projects into the DOM, including handling empty states.
+ * The function first retrieves the container element for the projects and the element for displaying the count of results. It then gets the filtered list of projects based on the current state. If there are no projects to display, it shows an empty state message. Otherwise, it generates the HTML for each project card and inserts it into the container. It also updates the count of results displayed to the user.
+ * @param {*} projectState
+ * @returns 
+ */
 function renderProjects() {
   const container = document.getElementById("projects-list");
   const count = document.getElementById("project-results-count");
@@ -190,6 +232,12 @@ function renderProjects() {
     .join("");
 }
 
+/**
+ * Renders the tag filter buttons based on the unique tags from all projects.
+ * The function first retrieves the container element for the tag filters. It then creates a list of unique tags by flattening the tags from all projects and using a Set to filter out duplicates. The "All" option is added at the beginning of the list. Finally, it generates the HTML for each tag filter button, applying an active class to the currently selected tag, and inserts it into the container.
+ * @param {*} projectState
+ * @returns 
+ */
 function renderTagFilters() {
   const filterContainer = document.getElementById("tag-filters");
   if (!filterContainer) return;
@@ -211,6 +259,13 @@ function renderTagFilters() {
     .join("");
 }
 
+/**
+ * 
+ * Initializes event listeners for search input and tag filter buttons to update the project display dynamically.
+ * The function first retrieves the search input element and the tag filter container. If either of these elements is not found, it simply renders the projects without setting up filters. If both elements are present, it calls the functions to render the tag filters and the initial list of projects. It then adds an event listener to the search input to update the projectState with the current search term and re-render the projects whenever the input changes. It also adds a click event listener to the filter container that checks if a tag button was clicked, updates the active tag in the projectState, re-renders the tag filters to reflect the active selection, and re-renders the projects based on the new filter.
+ * @param {*} projectState
+ * @returns 
+ */
 function setupProjectFilters() {
   const searchInput = document.getElementById("project-search");
   const filterContainer = document.getElementById("tag-filters");
@@ -238,6 +293,13 @@ function setupProjectFilters() {
   });
 }
 
+
+/**
+ * Purpose: Set up the accordion functionality for the experience, skills, and resume pages. Each accordion card can be expanded or collapsed to show or hide additional details. The function adds click event listeners to the accordion toggle buttons, which update the aria-expanded attribute for accessibility, change the button text to indicate the current state, toggle the hidden attribute on the panel containing the details, and add or remove an "is-open" class on the card for styling purposes.
+ * Key Functions:
+ * - setupAccordions: Initializes the accordion functionality by adding event listeners to the toggle buttons and managing the expanded/collapsed state of each accordion card. 
+ *  
+ */
 function setupAccordions() {
   const accordionButtons = document.querySelectorAll(".accordion-toggle");
 
@@ -255,6 +317,14 @@ function setupAccordions() {
   });
 }
 
+/**
+ * Renders the social media links in the footer.
+ * The function retrieves the container element for the social links and checks if it exists. If the container is found, it generates the HTML for each social link defined in the socials array, applying the appropriate CSS classes and attributes for accessibility. The generated HTML is then inserted into the container to display the social media/contact links in the footer of the site.
+ * Key Functions:
+ * - renderSocials: Renders the social media/contact links into the DOM based on the defined socials array. Each link includes an icon, label, and appropriate attributes for accessibility and styling.
+ *  
+ * @returns 
+ */
 function renderSocials() {
   const container = document.getElementById("social-links");
   if (!container) return;
